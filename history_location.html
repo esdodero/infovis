@@ -1,14 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Mis lugares</title>
-  <script src="https://public.flourish.studio/resources/embed.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mis lugares | Visualización de datos personales</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #F5F3EE;
+      color: #1F2933;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 40px 90px;
+    }
+
+    /* ---------- ENCABEZADO ---------- */
+
+    .intro {
+      max-width: 850px;
+      margin-bottom: 60px;
+    }
+
+    .eyebrow {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin: 0 0 25px;
+      font-weight: 700;
+      color: #172B2F;
+    }
+
+    .intro p {
+      max-width: 700px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #52616B;
+      margin: 0;
+    }
+
+
+    /* ---------- MÉTRICAS ---------- */
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 65px;
+    }
+
+    .stat {
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 25px 30px;
+      min-width: 190px;
+      box-shadow: 0 5px 20px rgba(30, 45, 50, 0.06);
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #1D5C63;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #64748B;
+    }
+
+
+    /* ---------- GRÁFICO ---------- */
+
+    .chart-section {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 45px 40px 50px;
+      box-shadow: 0 8px 30px rgba(30, 45, 50, 0.07);
+    }
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+
+    .section-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #1D5C63;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      letter-spacing: -1px;
+      margin: 0 0 10px;
+      color: #172B2F;
+    }
+
+    .section-description {
+      margin: 0;
+      color: #64748B;
+      font-size: 16px;
+    }
+
+    .chart {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .chart object {
+      display: block;
+      width: 100%;
+      min-height: 700px;
+      border: 0;
+    }
+
+
+    /* ---------- METODOLOGÍA ---------- */
+
+    .methodology {
+      margin-top: 35px;
+      padding: 30px 5px 0;
+      border-top: 1px solid #D7D8D3;
+      color: #64748B;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .methodology strong {
+      color: #334155;
+    }
+
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 700px) {
+
+      .page {
+        padding: 45px 20px 60px;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .intro p {
+        font-size: 17px;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+
+      .stat {
+        width: 100%;
+      }
+
+      .chart-section {
+        padding: 30px 20px;
+        border-radius: 18px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      .chart object {
+        min-height: 600px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-  <h1>Ranking de lugares más visitados</h1>
-  <object type="image/svg+xml" data="ranking_lugares_visitados.svg"></object>
-  <hr/>
+
+  <main class="page">
+
+    <!-- INTRODUCCIÓN -->
+
+    <section class="intro">
+
+      <div class="eyebrow">
+        Visualización de datos personales
+      </div>
+
+      <h1>
+        Mis lugares
+      </h1>
+
+      <p>
+        ¿Cuáles son los lugares que más frecuento?
+        Un recorrido por los espacios que forman parte
+        de mi historia de ubicación.
+      </p>
+
+    </section>
+
+
+    <!-- MÉTRICAS -->
+
+    <section class="stats">
+
+      <div class="stat">
+        <div class="stat-number">438</div>
+        <div class="stat-label">
+          lugares diferentes
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">20</div>
+        <div class="stat-label">
+          lugares más visitados
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- GRÁFICO -->
+
+    <section class="chart-section">
+
+      <div class="section-header">
+
+        <div class="section-number">
+          01 · Ranking
+        </div>
+
+        <h2>
+          Los lugares que más frecuento
+        </h2>
+
+        <p class="section-description">
+          Cantidad de visitas registradas para cada lugar.
+        </p>
+
+      </div>
+
+      <div class="chart">
+
+        <object
+          type="image/svg+xml"
+          data="ranking_lugares_visitados.svg">
+        </object>
+
+      </div>
+
+    </section>
+
+
+    <!-- METODOLOGÍA -->
+
+    <section class="methodology">
+
+      <strong>Sobre los datos</strong><br>
+
+      La visualización fue construida a partir del historial
+      de ubicación registrado por mi dispositivo. Los lugares
+      fueron agrupados según su identificación y ordenados
+      por cantidad de visitas.
+
+    </section>
+
+  </main>
+
 </body>
 </html>
