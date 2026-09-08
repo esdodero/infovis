@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis lugares, mis rutas | Visualización de datos personales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="history_location.css">
+</head>
+<body>
+  <main class="page">
+
+    <section class="intro">
+      <div class="eyebrow">Historia de ubicación personal</div>
+
+      <h1>Mis lugares, mis rutas</h1>
+
+      <p>
+        Un recorrido por mi historial de ubicación de Google Maps:
+        los lugares que forman parte de mi rutina y la forma en que
+        me muevo entre ellos, día a día.
+      </p>
+
+      <div class="date-range">Octubre 2024 — Agosto 2026 · 22 meses de historial</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-number">438</div>
+        <div class="stat-label">lugares distintos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1.392</div>
+        <div class="stat-label">visitas registradas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1.514</div>
+        <div class="stat-label">traslados registrados</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">8.268</div>
+        <div class="stat-label">km recorridos en total</div>
+      </div>
+    </section>
+
+    <!-- ============ 01 · LUGARES ============ -->
+    <section class="chart-section">
+      <div class="section-header">
+        <div class="section-index">01</div>
+        <div class="section-heading">
+          <div class="section-tag">Lugares</div>
+          <h2>¿Cuáles son los lugares que más frecuento?</h2>
+          <p class="section-description">
+            Ranking de visitas registradas por lugar, ordenado de mayor a menor cantidad de visitas.
+          </p>
+        </div>
+        <div class="tool-badge">
+          <span class="tool-badge-tool">Datawrapper</span>
+          <span class="tool-badge-type">Gráfico de barras</span>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div style="min-height:559px" id="datawrapper-vis-2atsp"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/2atsp/embed.js" charset="utf-8" data-target="#datawrapper-vis-2atsp"></script><noscript><img src="https://datawrapper.dwcdn.net/2atsp/full.png" alt="¿En qué lugares paso más tiempo? (Bar Chart)" /></noscript></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · GEOGRAFÍA ============ -->
+    <section class="chart-section">
+      <div class="section-header">
+        <div class="section-index">02</div>
+        <div class="section-heading">
+          <div class="section-tag">Geografía</div>
+          <h2>¿Dónde se concentran los lugares que frecuento?</h2>
+          <p class="section-description">
+            Distribución geográfica de los 438 lugares registrados en mi historial. El tamaño de cada
+            punto indica la cantidad de visitas.
+          </p>
+        </div>
+        <div class="tool-badge">
+          <span class="tool-badge-tool">Datawrapper</span>
+          <span class="tool-badge-type">Mapa de símbolos</span>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class="datawrapper-chart" id="datawrapper-vis-iYofD">
+          <script
+            type="text/javascript"
+            defer
+            src="https://datawrapper.dwcdn.net/iYofD/embed.js"
+            charset="utf-8"
+            data-target="#datawrapper-vis-iYofD">
+          </script>
+          <noscript>
+            <img
+              src="https://datawrapper.dwcdn.net/iYofD/full.png"
+              alt="Mapa de distribución de los lugares que frecuento"
+            >
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · TRANSPORTE ============ -->
+    <section class="chart-section">
+      <div class="section-header">
+        <div class="section-index">03</div>
+        <div class="section-heading">
+          <div class="section-tag">Transporte</div>
+          <h2>¿Cómo cambió mi forma de moverme mes a mes?</h2>
+          <p class="section-description">
+            Proporción de traslados según el medio de transporte utilizado (auto, caminata, bicicleta,
+            colectivo, subte), mes a mes.
+          </p>
+        </div>
+        <div class="tool-badge">
+          <span class="tool-badge-tool">Flourish</span>
+          <span class="tool-badge-type">Barras 100% apiladas</span>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/30179974"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30179974/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · RUTINA ============ -->
+    <section class="chart-section">
+      <div class="section-header">
+        <div class="section-index">04</div>
+        <div class="section-heading">
+          <div class="section-tag">Rutina</div>
+          <h2>¿Qué días y horarios me muevo más?</h2>
+          <p class="section-description">
+            Cantidad de traslados registrados, cruzando día de la semana y hora del día. Permite
+            distinguir mi patrón semanal habitual de las excepciones.
+          </p>
+        </div>
+        <div class="tool-badge">
+          <span class="tool-badge-tool">RAWGraphs</span>
+          <span class="tool-badge-type">Matriz de calor</span>
+        </div>
+      </div>
+
+      <div class="chart">
+        <object type="image/svg+xml" data="matrix_movimiento_dia_hora.svg"></object>
+      </div>
+    </section>
+
+    <!-- ============ 05 · VELOCIDAD Y CALENDARIO ============ -->
+    <section class="chart-section">
+      <div class="section-header">
+        <div class="section-index">05</div>
+        <div class="section-heading">
+          <div class="section-tag">Velocidad y calendario</div>
+          <h2>¿Qué tan rápido me muevo, y qué días recorro más distancia?</h2>
+          <p class="section-description">
+            Un dashboard con dos vistas: la primera cruza distancia y duración de cada traslado
+            individual para comparar la velocidad según el medio de transporte (colectivo y subte
+            se muestran sin línea de tendencia por tener muestra insuficiente: 4 y 1 viaje
+            registrados). La segunda es un calendario de calor con los kilómetros totales recorridos
+            por día, para detectar rutina semanal y viajes puntuales largos.
+          </p>
+        </div>
+        <div class="tool-badge">
+          <span class="tool-badge-tool">Tableau</span>
+          <span class="tool-badge-type">Dispersión + calendario de calor</span>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class='tableauPlaceholder' id='viz1788897047695' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Distancias_17888969083940&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Distancias_17888969083940&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Distancias_17888969083940&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1788897047695');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='700px';vizElement.style.minHeight='827px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='700px';vizElement.style.minHeight='827px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+    <section class="methodology">
+      <strong>Sobre los datos</strong><br>
+      La visualización fue construida a partir de mi historial de ubicación de Google Maps
+      (octubre 2024 – agosto 2026). Los lugares fueron agrupados por identificador y
+      geocodificados de forma inversa para obtener la dirección; los traslados se clasificaron
+      según el medio de transporte estimado por Google. Los datos crudos de trayecto (puntos GPS)
+      se excluyeron del análisis por no aportar información adicional a nivel agregado.
+    </section>
+
+  </main>
+</body>
+</html>
